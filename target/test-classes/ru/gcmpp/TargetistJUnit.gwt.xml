@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="Targetist">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='ru.gcmpp.Targetist' />
+    <inherits name='com.google.gwt.user.User'/>
+    <inherits name="com.sencha.gxt.ui.GXT"/>
+    <inherits name="com.google.gwt.resources.Resources" />
+    <inherits name='com.google.gwt.i18n.I18N'/>
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/Targetist/greet" class="ru.gcmpp.server.GreetingServiceImpl" />
+
+</module>

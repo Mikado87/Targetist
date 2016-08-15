@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='Targetist'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User' />
+
+  <!-- Inherit the default GWT style sheet.  You can change       -->
+  <!-- the theme of your GWT application by uncommenting          -->
+  <!-- any one of the following lines.                            -->
+  <inherits name='com.google.gwt.user.theme.standard.Standard' />
+    <inherits name="com.sencha.gxt.widget.core.Core"/>
+    <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+  <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
+
+  <!-- Other module inherits                                      -->
+
+  <!-- Specify the app entry point class.                         -->
+
+    <inherits name="com.sencha.gxt.ui.GXT"/>
+    <inherits name='com.sencha.gxt.chart.Chart' />
+    <inherits name="com.google.gwt.resources.Resources" />
+    <inherits name='com.google.gwt.i18n.I18N'/>
+
+  <entry-point class='ru.gcmpp.client.Targetist' />
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client' />
+  <source path='shared' />
+
+</module>

@@ -1,0 +1,44 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:c="urn:import:com.sencha.gxt.widget.core.client"
+             xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+             xmlns:form="urn:import:com.sencha.gxt.widget.core.client.form"
+             xmlns:button="urn:import:com.sencha.gxt.widget.core.client.button">
+
+    <ui:with type="com.sencha.gxt.core.client.util.Margins" field="loginMargins">
+        <ui:attributes top="20" right="0" bottom="0" left="0" />
+    </ui:with>
+
+    <ui:with type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData" field="verticalLayoutData">
+        <ui:attributes width="1" height="-1" margins="{loginMargins}" />
+    </ui:with>
+    <ui:with type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData" field="verticalLayoutDataPass">
+        <ui:attributes width="1" height="-1" />
+    </ui:with>
+
+    <container:HBoxLayoutContainer HBoxLayoutAlign="MIDDLE" pack="CENTER">
+        <c:FramedPanel headingText="Авторизация" width="300" height="150">
+            <container:VerticalLayoutContainer>
+                <container:child layoutData="{verticalLayoutData}">
+                    <form:FieldLabel text="Логин">
+                        <form:widget>
+                            <form:TextField allowBlank="false" ui:field="login"/>
+                        </form:widget>
+                    </form:FieldLabel>
+                </container:child>
+                <container:child layoutData="{verticalLayoutDataPass}">
+                    <form:FieldLabel text="Пароль">
+                        <form:widget>
+                            <form:PasswordField allowBlank="false" ui:field="pass"/>
+                        </form:widget>
+                    </form:FieldLabel>
+                </container:child>
+            </container:VerticalLayoutContainer>
+            <c:button>
+                <button:TextButton text="Вход" ui:field="enterButton"/>
+            </c:button>
+            <c:button>
+                <button:ToggleButton text="Новая кнопка" ui:field="toggleButton"/>
+            </c:button>
+        </c:FramedPanel>
+    </container:HBoxLayoutContainer>
+</ui:UiBinder>
